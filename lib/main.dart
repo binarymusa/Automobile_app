@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart';
-import 'pages/cart_page.dart';
-import 'pages/purchases_page.dart';
+import "package:test_app/routes.dart";
 
 void main() =>  runApp(const MainApp());
-
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -12,16 +9,16 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-
-      home:  MyHomePage(
-        title: '',
-      ),
-     
+      initialRoute: '/',
+      onGenerateRoute: AppRoutes.generateRoute,
     );
   }
 }
 
 
+
+
+/* 
 class MyHomePage extends StatefulWidget{
   const MyHomePage({super.key, required this.title});
   
@@ -57,7 +54,7 @@ class MyHomePageState extends State<MyHomePage>{
         backgroundColor: const Color.fromARGB(185, 255, 255, 255),
         title: const Text(
           'Automobile App',
-          style:  TextStyle(color: Color.fromARGB(244, 255, 255, 255)), 
+          style:  TextStyle(color: Color.fromARGB(201, 0, 0, 0)), 
         ),
       ),
 
@@ -113,3 +110,4 @@ class MyHomePageState extends State<MyHomePage>{
     );
   }
 }
+ */
