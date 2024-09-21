@@ -9,17 +9,32 @@ class AppRoutes {
     switch (settings.name) {
       case '/':    
         return MaterialPageRoute(
-          builder: (_) => const HomePage(),
+          builder: (_) =>  HomePage(
+            currentIndex: 0,
+              onNavTapped: (index) {
+                Navigator.of(_).pushReplacementNamed(
+                  index == 0 ? '/' : (index == 1 ? '/Cart' : '/Purchases'));}
+          ),
         );
 
       case '/Cart':    
         return MaterialPageRoute(
-          builder: (_) => const CartPage(),
+          builder: (_) => CartPage(
+            currentIndex: 1,
+              onNavTapped: (index) {
+                Navigator.of(_).pushReplacementNamed(
+                  index == 1 ? '/' : (index == 1 ? '/Cart' : '/Purchases'));}
+          ),
         );
 
       case '/Purchases':
         return MaterialPageRoute(
-        builder: (_) => const PurchasesPage(),
+        builder: (_) => PurchasesPage(
+          currentIndex: 2,
+              onNavTapped: (index) {
+                Navigator.of(_).pushReplacementNamed(
+                  index == 2 ? '/' : (index == 2 ? '/Cart' : '/Purchases'));}
+        ),
         );
 
       default:      

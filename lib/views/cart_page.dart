@@ -4,7 +4,14 @@ import 'package:test_app/widgets/bottomnavbar.dart';
 import 'package:test_app/widgets/drawer.dart';
 
 class CartPage extends StatelessWidget {
-  const CartPage({super.key,});
+  final int currentIndex;
+  final Function(int) onNavTapped;
+
+  const CartPage({
+    super.key,
+    required this.currentIndex,
+    required this.onNavTapped,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +25,16 @@ class CartPage extends StatelessWidget {
         ),
       ),
       endDrawer: const EndDrawer(),
+
       body:const Center(
         child: Text('Cart page', style: TextStyle(color: Color.fromARGB(185, 255, 255, 255), ),),
       ),
       backgroundColor: const Color.fromARGB(155, 48, 48, 48),
-      bottomNavigationBar: const Bottomnavbars(),
+      
+      bottomNavigationBar: Bottomnavbars(
+        currentIndex: currentIndex,
+        onTap: onNavTapped,
+      ),
     );
   }
 }

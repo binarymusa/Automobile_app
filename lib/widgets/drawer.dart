@@ -7,6 +7,7 @@ class EndDrawer extends StatelessWidget{
   Widget build(BuildContext context){
     return Drawer(
         child: ListView(
+          // clipBehavior: Clip.none,
           padding: EdgeInsets.zero,
           children:const  <Widget>[
             DrawerHeader(              

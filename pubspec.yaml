@@ -17,3 +17,23 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+  - /home/binary/Documents/flutter/test_app/lib/assets/icons/icon_hdpi.png
+  - /home/binary/Documents/flutter/test_app/lib/assets/icons/icon_mdpi.png
+  - /home/binary/Documents/flutter/test_app/lib/assets/icons/icon_xhdpi.png
+  - /home/binary/Documents/flutter/test_app/lib/assets/icons/icon_xxhdpi.png
+  - /home/binary/Documents/flutter/test_app/lib/assets/icons/icon_xxxhdpi.png
+
+
+
+# flutter icon pakage
+# dev_dependencies:
+#   flutter_launcher_icons: ^0.10.0
+
+# flutter_icons:
+#   android: true
+#   ios: true
+#   image_path: "assets/icon/"  # Path to your icon image
+
+# images used in oroject

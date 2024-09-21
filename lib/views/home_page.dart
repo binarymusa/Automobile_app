@@ -5,7 +5,14 @@ import 'package:test_app/widgets/column.dart';
 import 'package:test_app/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key,});
+  final int currentIndex;
+  final Function(int) onNavTapped;
+
+  const HomePage({
+    super.key, 
+    required this.currentIndex,
+    required this.onNavTapped,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +26,14 @@ class HomePage extends StatelessWidget {
         ),
       ),
       endDrawer: const EndDrawer(),
+
       body: const ColumnItem(),
       backgroundColor: const Color.fromARGB(155, 48, 48, 48),
-      bottomNavigationBar: const Bottomnavbars(),
+      
+      bottomNavigationBar:  Bottomnavbars(
+        currentIndex: currentIndex,
+        onTap: onNavTapped,
+      ),
     );
   }
 }

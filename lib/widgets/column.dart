@@ -8,7 +8,7 @@ class ColumnItem extends StatelessWidget{
      return  SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 9.0),
       child: Column(
-        children: List.generate(5, (index) => buildColumns(index)),
+        children: List.generate(3, (index) => buildColumns(index)),
       ),
      );
   }
@@ -36,7 +36,6 @@ Widget buildItem(int index) {
     padding: const EdgeInsets.all(8.0),
     child: Column(
       children: <Widget>[
-        const Icon(Icons.star, color: Colors.white),
         Text(
           'Item $index',
           style: const TextStyle(color: Color(0xFFFFFFFF)),
