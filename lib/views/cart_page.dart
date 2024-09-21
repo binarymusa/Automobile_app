@@ -19,7 +19,7 @@ class CartPage extends StatelessWidget {
       body: Center(
         child: Text('Cart page', style: TextStyle(color: Color.fromARGB(185, 255, 255, 255), ),),
       ),
-      backgroundColor:  Color.fromARGB(155, 48, 48, 48),
+      backgroundColor: Color.fromARGB(155, 48, 48, 48),
       
     );
   }
