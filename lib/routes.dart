@@ -11,9 +11,9 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) =>  HomePage(
             currentIndex: 0,
-              onNavTapped: (index) {
-                Navigator.of(_).pushReplacementNamed(
-                  index == 0 ? '/' : (index == 1 ? '/Cart' : '/Purchases'));}
+            onNavTapped: (index) {
+              Navigator.of(_).pushReplacementNamed(
+                index == 0 ? '/' : (index == 1 ? '/Cart' : '/Purchases'));}
           ),
         );
 
@@ -21,9 +21,9 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (_) => CartPage(
             currentIndex: 1,
-              onNavTapped: (index) {
-                Navigator.of(_).pushReplacementNamed(
-                  index == 1 ? '/' : (index == 1 ? '/Cart' : '/Purchases'));}
+            onNavTapped: (index) {
+              Navigator.of(_).pushReplacementNamed(
+                index == 1 ? '/' : (index == 1 ? '/Cart' : '/Purchases'));}
           ),
         );
 
@@ -31,9 +31,9 @@ class AppRoutes {
         return MaterialPageRoute(
         builder: (_) => PurchasesPage(
           currentIndex: 2,
-              onNavTapped: (index) {
-                Navigator.of(_).pushReplacementNamed(
-                  index == 2 ? '/' : (index == 2 ? '/Cart' : '/Purchases'));}
+          onNavTapped: (index) {
+            Navigator.of(_).pushReplacementNamed(
+              index == 2 ? '/' : (index == 2 ? '/Cart' : '/Purchases'));}
         ),
         );
 

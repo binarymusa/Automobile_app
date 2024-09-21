@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class Bottomnavbars extends StatelessWidget {
   final int currentIndex; // Add currentIndex parameter
   final Function(int) onTap; // Function to handle tap
@@ -37,20 +36,6 @@ class Bottomnavbars extends StatelessWidget {
         ),
         backgroundColor: const Color.fromARGB(185, 255, 255, 255),
         onTap: onTap,
-        // onTap: (index) {
-        //   switch(index) {
-        //     case 0:
-        //     Navigator.pushNamed(context, '/');
-        //     break;
-
-        //     case 1:
-        //     Navigator.pushNamed(context, '/Cart');
-        //     break;
-
-        //     case 2:
-        //     Navigator.pushNamed(context, '/Purchases');
-        //   }
-        // },
     );
   }
 }
